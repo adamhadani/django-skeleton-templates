@@ -25,6 +25,6 @@ NOTE: I highly recommend you create your projects in separated virtualenv's.
 
 I've based some of this on the following project template which I recommend as a good starting point as well:
 
-https://github.com/amccloud/django-project-skel
-http://amccloud.com/post/14689947527/django-1-4-custom-project-template
+* https://github.com/amccloud/django-project-skel
+* http://amccloud.com/post/14689947527/django-1-4-custom-project-template
 
