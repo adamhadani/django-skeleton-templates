@@ -102,15 +102,16 @@ AUTHENTICATION_BACKENDS = (
 # django.contrib.sites
 SITE_ID=1
 
-#AUTH_PROFILE_MODULE = 'api.UserProfile'
 
 LOGIN_REDIRECT_URL = '/'
 
+#AUTH_PROFILE_MODULE = 'api.UserProfile'
+
 # django-registration app config
-ACCOUNT_ACTIVATION_DAYS = 7
+#ACCOUNT_ACTIVATION_DAYS = 7
 
 # django-tastypie token authentication
-TOKEN_VALID_TIME = 3600
+#TOKEN_VALID_TIME = 3600
 
 ROOT_URLCONF = '{{ project_name }}.urls'
 
