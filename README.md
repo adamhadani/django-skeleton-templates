@@ -2,8 +2,7 @@
 
 Reusable Django skeleton project / app  templates
 
-Since Django 1.4, you can now define templates for creating new projects / apps when running 'startproject' and 'startapp', e.g:
-
+Starting with Django 1.4, you can now define templates for creating new projects / apps when running 'startproject' and 'startapp'.
 
 ## Usage
 
