@@ -1,0 +1,7 @@
+django>=1.4
+
+# Common Django reusable apps
+django-boss
+Django-facebook
+django-tastypie
+south
