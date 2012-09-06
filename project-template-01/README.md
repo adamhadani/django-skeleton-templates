@@ -4,6 +4,7 @@
 - python >= 2.5
 - pip
 - virtualenv/wrapper (optional)
+- django-boss (CLI helpers for django, removes need for per-project manage.py)
 
 ## Installation ##
 ### Creating the environment ###
@@ -44,12 +45,12 @@ export DJANGO_SETTINGS_MODULE={{ project_name }}.configs.development.settings
 
 ### Sync database ###
 ```bash
-python manage.py syncdb
+djboss manage syncdb
 ```
 
 ## Running ##
 ```bash
-python manage.py runserver
+djboss manage runserver
 ```
 
 Open browser to http://127.0.0.1:8000
