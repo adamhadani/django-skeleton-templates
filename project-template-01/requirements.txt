@@ -11,4 +11,6 @@ PIL
 django-boss
 Django-facebook
 django-tastypie
+django-profiles
+django-registration
 south
