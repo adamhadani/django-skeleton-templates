@@ -130,6 +130,9 @@ INSTALLED_APPS = (
     # Uncomment the next line to enable admin documentation:
     #'django.contrib.admindocs',
     
+    # Bunch of useful template tags for 'humanizing' numbers, dates etc.
+    'django.contrib.humanize',
+    
     # Static pages via the flat pages django app
     'django.contrib.flatpages',
     
