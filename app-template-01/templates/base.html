@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+{% load i18n %}
+<html lang="en">
+<head>
+	<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+	<meta http-equiv="content-language" content="en"/>
+
+    <title>{% block title %}{% endblock title %}</title>
+	<link rel="icon" href="{{ STATIC_URL }}favicon.ico" type="image/x-icon" />
+	<link rel="apple-touch-icon-precomposed" href="{{ STATIC_URL }}img/ipad_touch_icon.png" />
+	
+	<link rel="stylesheet" href="{{ STATIC_URL }}css/common.css" type="text/css" media="all"/>
+
+	{% block extrahead %}{% endblock extrahead %}
+</head>
+
+<body>
+<div id="header">
+	<div id="header_content">
+		<div id="user_module">
+			{% if user.is_authenticated %}
+				<span><strong>{{ user.username }}</strong></span>
+				|
+				<a href="/accounts/logout/?next=/">{% trans "Log Out" %}</a>
+			{% else %}
+				<a id="login-link" href="/accounts/login?next={{ request.path }}">{% trans "Log In" %}</a>
+			{% endif %}
+		</div>
+		<a id="logo" href="/">{% trans "Logo Text" %}</a>
+		<div id="tagline">{% trans "Tagline" %}</div>
+	</div>
+</div>
+
+<div id="container">
+	<div id="content">{% block content %}{% endblock content %}</div>
+</div>
+
+<div id="footer">
+	<div id="footer_menus_container">
+		<ul class="footer_menu" id="company_menu">
+			<li>Company &#187;</li>
+			<li><a href="/company/about/">About</a></li>
+			<li><a href="/company/team/">Team</a></li>
+			<li><a href="/company/careers/">Careers</a></li>
+			<li><a href="/company/contact/">Contact Us</a></li>
+		</ul>
+		<ul class="footer_menu" id="dev_menu">
+			<li>Developers &#187;</li>
+			<li><a href="/dev/api/">API</a></li>
+			<li><a href="/dev/open_source/">Open Source</a></li>
+		</ul>
+		<ul class="footer_menu" id="legal_menu">
+			<li>Legal &#187;</li>
+			<li><a href="/legal/tos/">Terms of Use</a></li>
+			<li><a href="/legal/privacy/">Privacy Policy</a></li>
+		</ul>
+	</div>
+</div>
+
+<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+
+</body>
+</html>
