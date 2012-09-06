@@ -39,7 +39,7 @@ pip install -r requirements.txt
 In your virtual environment postactivate hook (when using virtualenvwrapper),
 Add the directive to point to relevant DJANGO_SETTINGS_MODULE, e.g for development settings:
 ```bash
-export DJANGO_SETTINGS_MODULE={{ site_name }}.configs.development.settings
+export DJANGO_SETTINGS_MODULE={{ project_name }}.configs.development.settings
 ```
 
 ### Sync database ###
