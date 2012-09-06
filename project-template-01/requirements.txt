@@ -1,5 +1,12 @@
 django>=1.4
 
+# Python base libraries commonly used
+psycopg2
+python-memcached
+docutils
+pytz
+PIL
+
 # Common Django reusable apps
 django-boss
 Django-facebook

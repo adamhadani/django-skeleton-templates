@@ -133,6 +133,9 @@ INSTALLED_APPS = (
     # Static pages via the flat pages django app
     'django.contrib.flatpages',
     
+    # Geospatial DB Support (e.g PostGIS)
+    #'django.contrib.gis',
+    
     'south',
     'tastypie',
     #'registration',
