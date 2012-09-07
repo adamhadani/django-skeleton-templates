@@ -16,7 +16,7 @@ MANAGERS = ADMINS
 
 # Locale settings
 
-TIME_ZONE = 'UTC'
+TIME_ZONE = None # 'UTC'
 
 LANGUAGE_CODE = 'en-US'
 
@@ -67,6 +67,7 @@ TEMPLATE_LOADERS = (
 )
 
 TEMPLATE_CONTEXT_PROCESSORS = (
+    #'django_facebook.context_processors.facebook',
     'django.contrib.auth.context_processors.auth',
     'django.core.context_processors.debug',
     'django.core.context_processors.i18n',
@@ -96,17 +97,26 @@ MIDDLEWARE_CLASSES = (
 )
 
 AUTHENTICATION_BACKENDS = (
+    #'django_facebook.auth_backends.FacebookBackend',
     'django.contrib.auth.backends.ModelBackend',
 )
 
 # django.contrib.sites
 SITE_ID=1
 
-
+# django.contrib.auth
 LOGIN_REDIRECT_URL = '/'
 
-#AUTH_PROFILE_MODULE = 'api.UserProfile'
+#AUTH_PROFILE_MODULE = 'myapp.UserProfile' # 'django_facebook.FacebookProfile'
 
+# Django-facebook config
+#FACEBOOK_APP_ID = ''
+#FACEBOOK_APP_SECRET = ''
+#FACEBOOK_HIDE_CONNECT_TEST = True
+#FACEBOOK_DEFAULT_SCOPE = ['email', 'user_likes' ]
+#FACEBOOK_STORE_FRIENDS = True
+#FACEBOOK_STORE_ALL_ACCESS_TOKENS = False
+ 
 # django-registration app config
 #ACCOUNT_ACTIVATION_DAYS = 7
 
@@ -143,6 +153,7 @@ INSTALLED_APPS = (
     'tastypie',
     #'registration',
     #'profiles',
+    #'django_facebook',
 
     # Add additional apps here
     ##'api'

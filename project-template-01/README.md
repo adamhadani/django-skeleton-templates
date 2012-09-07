@@ -6,6 +6,11 @@
 - virtualenv/wrapper (optional)
 - django-boss (CLI helpers for django, removes need for per-project manage.py)
 
+Optional:
+- django-registration
+- django-profiles
+- Django-facebook
+
 ## Installation ##
 ### Creating the environment ###
 Create a virtual python environment for the project.

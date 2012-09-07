@@ -9,7 +9,8 @@
 	<link rel="icon" href="{{ STATIC_URL }}favicon.ico" type="image/x-icon" />
 	<link rel="apple-touch-icon-precomposed" href="{{ STATIC_URL }}img/ipad_touch_icon.png" />
 	
-	<link rel="stylesheet" href="{{ STATIC_URL }}css/common.css" type="text/css" media="all"/>
+	<link rel="stylesheet" href="{{ STATIC_URL }}css/reset.css" type="text/css" media="all"/>
+	<!-- <link href="{{ STATIC_URL }}css/facebook.css" type="text/css" rel="stylesheet" media="all" /> -->
 
 	{% block extrahead %}{% endblock extrahead %}
 </head>
@@ -58,6 +59,9 @@
 </div>
 
 <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+<!-- {% include 'django_facebook/_facebook_js.html' %} -->
+
+{% block extrajsbottom %}{% endblock extrajsbottom %}
 
 </body>
 </html>
